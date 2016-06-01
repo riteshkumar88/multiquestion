@@ -1,0 +1,24 @@
+<div>
+   <div ng-show="user_in">
+       <!---user_in-->
+       <div class="container"><!-- container-->
+           
+           <div ng-show="quiz_box"><!--quiz_box-->
+               <div ><!-- current_q-->
+                   <p>Q:{{current_q.question}} ?</p>
+                   <ul style="list-style: none;">
+                       <li><input type="radio" ng-model="u_ans" value="a1"  name="u_a" /> {{current_q.a_1}}</li>
+                       <li><input type="radio" ng-model="u_ans" value="a2" name="u_a" /> {{current_q.a_2}}</li>
+                       <li><input type="radio" ng-model="u_ans" value="a3" name="u_a" /> {{current_q.a_3}}</li>
+                       <li><input type="radio" ng-model="u_ans" value="a4" name="u_a" /> {{current_q.a_4}}</li>
+                   </ul>
+               </div><!--current_q-->
+               <p style="color: red">{{err_message}}</p>
+               <button ng-show="prev_btn" class="btn btn-warning" ng-click="change_q('prev')">Previous</button>
+               <button ng-show="next_btn" class="btn btn-success" ng-click="change_q('next')" >Next</button>
+           
+           </div><!--quiz_box-->
+
+     </div><!--container-->
+    </div><!--user_in-->
+
