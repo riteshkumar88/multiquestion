@@ -1,5 +1,5 @@
-var sampleApp = angular.module("myApp",[])
-    .config(['$routeProvider',function($routeProvider,$location){
+var sampleApp = angular.module("myApp",['ui.bootstrap'])
+    .config(['$routeProvider',function($routeProvider){
     	$routeProvider
              .when('/takeQuiz_pg',{
                  templateUrl:'views/htmlQuiz_pg.html',
@@ -34,8 +34,9 @@ var sampleApp = angular.module("myApp",[])
         )//Error
     }
 */
-    $scope.go = function (path){
-        $location.path('/takeQuiz_pg');
+ 
+    $scope.go = function (){
+        $location.path('path');
     }
 
 });
